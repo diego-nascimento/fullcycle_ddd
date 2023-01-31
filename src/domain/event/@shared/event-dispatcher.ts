@@ -12,8 +12,8 @@ export class EventDispatcher implements EventDispatcherInterface {
 register(eventName: string, eventHandler: EventHandlerInterface<EventInterface>): void {
     if(!this.eventHandlers[eventName]){
       this.eventHandlers[eventName] = []
-      this.eventHandlers[eventName].push(eventHandler)
     }
+    this.eventHandlers[eventName].push(eventHandler)
 }
 
   unregister(eventName: string, eventHandler: EventHandlerInterface<EventInterface>): void {
